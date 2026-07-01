@@ -1,0 +1,1 @@
+import { languages, getMessages } from '@/lib/i18n'; import SiteShell from '@/components/SiteShell'; export async function generateStaticParams(){ return languages.map(lang=>({lang})) } export default async function LangLayout({children, params}){ const messages=await getMessages(params.lang); return <SiteShell lang={params.lang} messages={messages}>{children}</SiteShell>; }

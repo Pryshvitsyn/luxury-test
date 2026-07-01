@@ -1,0 +1,5 @@
+
+import { languages } from '@/lib/i18n';
+export async function generateStaticParams(){ return languages.map(lang=>({lang})) }
+export async function generateMetadata(){ return { title: 'Portfolio | LuxuryItaly', description: 'Selected projects showing before and after transformations across Italy.' } }
+export default function Page(){ return (<main><section className="section"><div className="wrap"><p className="eyebrow">Portfolio</p><h1 className="h1" style={fontSize:'clamp(2.4rem,5vw,4.6rem)'}>Portfolio</h1><p className="lead">Selected projects showing before and after transformations across Italy.</p><div className="cols2"><article className="card pad"><h2 className="h2">What the client receives</h2><ul><li>Featured regions: Amalfi Coast, Umbria, Argentario, Rome, Tuscany and Lake Como.</li><li>What is visible: the problem, the approach and the transformation side by side.</li><li>Why it matters: proof of quality is easier to trust than promises.</li></ul></article><article className="card pad"><h2 className="h2">How we work</h2><p>A structured process from first call to final handover.</p></article></div></div></section></main>); }
